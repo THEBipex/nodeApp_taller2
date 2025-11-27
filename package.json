@@ -1,0 +1,25 @@
+{
+  "name": "node-redis-api",
+  "version": "1.0.0",
+  "description": "API simple para Taller DevOps",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --coverage",
+    "test:ci": "jest --coverage --ci --reporters=default --reporters=jest-junit"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "redis": "^4.6.10"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "supertest": "^6.3.3"
+  }
+}

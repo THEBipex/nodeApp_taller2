@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  # Contenedor 1: La App
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  # Contenedor 2: La Base de Datos
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
